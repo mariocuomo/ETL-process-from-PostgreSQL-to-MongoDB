@@ -11,6 +11,17 @@ CONFIGURATION<br>
 
 
 ## FIRST METHOD - Python
-There are two files in [python_version](https://github.com/mariocuomo/ETL-process-from-PostgreSQL-to-MongoDB/tree/main/python_version) folder.<br>
-`restore.py` is dedicated to **restore** databases (PostgreSQL and MongoDB).<br>
-`run.py` starts the **ETL computation** extracting data from PostgreSQL and loading it in MongoDB after a simple transformation.
+[python_version](https://github.com/mariocuomo/ETL-process-from-PostgreSQL-to-MongoDB/tree/main/python_version) folder contains one file.<br>
+`run.py` starts the **ETL computation** extracting data from PostgreSQL and loading it in MongoDB after a simple transformation.<br>
+**REQUIRED**: _psycopg2_ and _pymongo_.<br><br>
+
+
+## SECOND METHOD - Logstash
+[logstash_version](https://github.com/mariocuomo/ETL-process-from-PostgreSQL-to-MongoDB/tree/main/logstash_version) folder contains one file.<br>
+`simple-out.conf` starts the **ETL computation** extracting data from PostgreSQL and loading it in MongoDB after a simple transformation using logstash.<br>
+**REQUIRED**: _aggregate_ filter, input _jdbc_, output _mongodb_ plugin.<br>
+<br>
+<br>
+
+`restore.py` is dedicated to **restore** databases (PostgreSQL and MongoDB).
+
